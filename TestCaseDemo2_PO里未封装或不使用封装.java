@@ -26,5 +26,7 @@ public class TestCaseDemo2 {
 		 * 添加检查点，检查“动态码发送成功”提示框应出现
 		 */
 		BaseAssert.assertTrue(reg.loadingOverlay.isDisplayed());
+		//等待提示框消失，以免后续运行的用例受影响
+		reg.waitLoadingOverlayDisappear(); //等待“动态码发送成功”提示框消失
 	}
 }
